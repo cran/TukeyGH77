@@ -1,0 +1,16 @@
+da56a67fa2ddc629c77193992c1d3cfe *DESCRIPTION
+7d8a5f35331b0f76afa0a94ecca01fa8 *NAMESPACE
+3d016c7be6eee38b34eb4e787af8d73a *NEWS.md
+b8dbde3f857a2128acb72fa255b45945 *R/0info.R
+fb345ce728d043d0b35cb7ef61713f99 *R/TukeyGH.R
+1ece53e0fbd75d4de4d11e37ea776ed0 *R/helper.R
+d87d0eef42f383dbebaab97dba3f04d7 *R/qGH2z.R
+bc85ac2fc2e4c72e7425d81de58a7667 *R/vuniroot2.R
+85c358faf47e950d28aca9f3f6461222 *R/z2qGH.R
+20c8d3f97d93e2e318a22508275b5a02 *build/partial.rdb
+f0da7fda3a02014e2731664339b050c9 *man/TukeyGH.Rd
+b3b730a6f0bf0411b31a7c5c8bbc2e25 *man/TukeyGH77-package.Rd
+eb7b2c0d5fc2dea577aa16f634a72fb2 *man/TukeyGH_helper.Rd
+a040c122f33880e01f2c11d38320c0cd *man/qGH2z.Rd
+c43db631a1d7e0835a35ef8ea8e8e119 *man/vuniroot2.Rd
+de13c8ae6424db4a1550504bb1cc8f82 *man/z2qGH.Rd
