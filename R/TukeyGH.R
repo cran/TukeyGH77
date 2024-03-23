@@ -4,12 +4,12 @@
 
 
 
-#' @title Tukey's \eqn{g}-&-\eqn{h} Distribution
+#' @title Tukey \eqn{g}-&-\eqn{h} Distribution
 #' 
 #' @description 
 #' 
 #' Density, distribution function, quantile function and simulation 
-#' for the Tukey's \eqn{g}-&-\eqn{h} distribution with 
+#' for Tukey \eqn{g}-&-\eqn{h} distribution with 
 #' location parameter \eqn{A},
 #' scale parameter \eqn{B},
 #' skewness \eqn{g} and 
@@ -25,38 +25,33 @@
 #' 
 #' @param lower.tail \link[base]{logical} scalar, if `TRUE` (default), probabilities are \eqn{Pr(X\le x)} otherwise, \eqn{Pr(X>x)}.
 #' 
-#' @param A \link[base]{double} scalar, location parameter \eqn{A}, default \eqn{A=0} (as parameter `mean` of \link[stats]{dnorm})
+#' @param A \link[base]{double} scalar, location parameter \eqn{A=0} by default
 #' 
-#' @param B \link[base]{double} scalar, scale parameter \eqn{B>0}, default \eqn{B=1} (as parameter `sd` of \link[stats]{dnorm})
+#' @param B \link[base]{double} scalar, scale parameter \eqn{B>0}. Default \eqn{B=1}
 #' 
-#' @param g \link[base]{double} scalar, skewness parameter \eqn{g}, default \eqn{g=0} indicating no skewness
+#' @param g \link[base]{double} scalar, skewness parameter \eqn{g=0} by default (i.e., no skewness)
 #' 
-#' @param h \link[base]{double} scalar, elongation parameter \eqn{h\geq 0}, default \eqn{h=0} indicating no kurtosis
+#' @param h \link[base]{double} scalar, elongation parameter \eqn{h\geq 0}. Default \eqn{h=0} (i.e., no elongation)
 #' 
 # @param interval interval of standard normal quantiles, when solving from Tukey \eqn{g}-&-\eqn{h} quantiles using the vuniroot algorithm 
 #' 
 #' @param ... other parameters of function [vuniroot2]
 #' 
-#' @details
-#' 
-#' Argument `A`, `B`, `g` and `h` will be recycled to the maximum length of the four.
+# @details
+# Argument `A`, `B`, `g` and `h` will be recycled to the maximum length of the four.
 #' 
 #' @returns 
 #' 
-#' Function [dGH] gives the density and accommodates \link[base]{vector} arguments `A`, `B`, `g` and `h`.
-#' The quantiles `x` can be either \link[base]{vector} or matrix.
+#' Function [dGH] returns the density and accommodates \link[base]{vector} arguments `A`, `B`, `g` and `h`.
+#' The quantiles `x` can be either \link[base]{vector} or \link[base]{matrix}.
 #' This function takes about 1/5 time of `gk::dgh`.
 #' 
-#' Function [pGH] gives the distribution function, only taking scalar arguments and \link[base]{vector} quantiles \eqn{q}.
+#' Function [pGH] returns the distribution function, only taking scalar arguments and \link[base]{vector} quantiles \eqn{q}.
 #' This function takes about 1/10 time of function `gk::pgh`.
 #' 
-#' Function [qGH] gives the quantile function, only taking scalar arguments and \link[base]{vector} probabilities \eqn{p}.
+#' Function [qGH] returns the quantile function, only taking scalar arguments and \link[base]{vector} probabilities \eqn{p}.
 #' 
 #' Function [rGH] generates random deviates, only taking scalar arguments.
-#' 
-#' @note
-#' Function `gk:::z2gh` is only an *approximation* to Tukey's \eqn{g}-&-\eqn{h} transformation.
-#' 
 #' 
 #' @examples
 #' (x = c(NA_real_, rGH(n = 5L, g = .3, h = .1)))
@@ -87,7 +82,7 @@ dGH <- function(x, A = 0, B = 1, g = 0, h = 0, log = FALSE, ...) {
 #' @importFrom stats rnorm
 #' @export
 rGH <- function(n, A = 0, B = 1, g = 0, h = 0) {
-  z2qGH(rnorm(n), A = A, B = B, g = g, h = h)
+  z2GH(rnorm(n), A = A, B = B, g = g, h = h)
 }
 
 
@@ -95,9 +90,9 @@ rGH <- function(n, A = 0, B = 1, g = 0, h = 0) {
 #' @importFrom stats qnorm
 #' @export
 qGH <- function(p, A = 0, B = 1, g = 0, h = 0, lower.tail = TRUE, log.p = FALSE) {
-  # only works with vector `p` and len-1 `A`,`B`,`g`,`h`, for now
+  # only works with vector `p` and scalar `A`,`B`,`g`,`h`, for now
   z <- qnorm(p = p, lower.tail = lower.tail, log.p = log.p)
-  .z2qGH(z = z, A = A, B = B, g = g, h = h)
+  .z2GH(z = z, A = A, B = B, g = g, h = h)
 }
 
 
@@ -106,8 +101,8 @@ qGH <- function(p, A = 0, B = 1, g = 0, h = 0, lower.tail = TRUE, log.p = FALSE)
 #' @importFrom stats pnorm
 #' @export
 pGH <- function(q, A = 0, B = 1, g = 0, h = 0, lower.tail = TRUE, log.p = FALSE, ...) {
-  # only works with vector `q` and len-1 `A`,`B`,`g`,`h`
-  z <- qGH2z(q = q, A = A, B = B, g = g, h = h, ...)
+  # only works with vector `q` and scalar `A`,`B`,`g`,`h`
+  z <- GH2z(q = q, A = A, B = B, g = g, h = h, ...)
   pnorm(q = z, mean = 0, sd = 1, lower.tail = lower.tail, log.p = log.p)
 }
 

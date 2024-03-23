@@ -6,7 +6,7 @@
 \alias{rGH}
 \alias{qGH}
 \alias{pGH}
-\title{Tukey's \eqn{g}-&-\eqn{h} Distribution}
+\title{Tukey \eqn{g}-&-\eqn{h} Distribution}
 \usage{
 dGH(x, A = 0, B = 1, g = 0, h = 0, log = FALSE, ...)
 
@@ -19,13 +19,13 @@ pGH(q, A = 0, B = 1, g = 0, h = 0, lower.tail = TRUE, log.p = FALSE, ...)
 \arguments{
 \item{x, q}{\link[base]{double} \link[base]{vector}, quantiles}
 
-\item{A}{\link[base]{double} scalar, location parameter \eqn{A}, default \eqn{A=0} (as parameter \code{mean} of \link[stats]{dnorm})}
+\item{A}{\link[base]{double} scalar, location parameter \eqn{A=0} by default}
 
-\item{B}{\link[base]{double} scalar, scale parameter \eqn{B>0}, default \eqn{B=1} (as parameter \code{sd} of \link[stats]{dnorm})}
+\item{B}{\link[base]{double} scalar, scale parameter \eqn{B>0}. Default \eqn{B=1}}
 
-\item{g}{\link[base]{double} scalar, skewness parameter \eqn{g}, default \eqn{g=0} indicating no skewness}
+\item{g}{\link[base]{double} scalar, skewness parameter \eqn{g=0} by default (i.e., no skewness)}
 
-\item{h}{\link[base]{double} scalar, elongation parameter \eqn{h\geq 0}, default \eqn{h=0} indicating no kurtosis}
+\item{h}{\link[base]{double} scalar, elongation parameter \eqn{h\geq 0}. Default \eqn{h=0} (i.e., no elongation)}
 
 \item{log, log.p}{\link[base]{logical} scalar, if \code{TRUE}, probabilities \eqn{p} are given as \eqn{\log(p)}.}
 
@@ -38,30 +38,24 @@ pGH(q, A = 0, B = 1, g = 0, h = 0, lower.tail = TRUE, log.p = FALSE, ...)
 \item{lower.tail}{\link[base]{logical} scalar, if \code{TRUE} (default), probabilities are \eqn{Pr(X\le x)} otherwise, \eqn{Pr(X>x)}.}
 }
 \value{
-Function \link{dGH} gives the density and accommodates \link[base]{vector} arguments \code{A}, \code{B}, \code{g} and \code{h}.
-The quantiles \code{x} can be either \link[base]{vector} or matrix.
+Function \link{dGH} returns the density and accommodates \link[base]{vector} arguments \code{A}, \code{B}, \code{g} and \code{h}.
+The quantiles \code{x} can be either \link[base]{vector} or \link[base]{matrix}.
 This function takes about 1/5 time of \code{gk::dgh}.
 
-Function \link{pGH} gives the distribution function, only taking scalar arguments and \link[base]{vector} quantiles \eqn{q}.
+Function \link{pGH} returns the distribution function, only taking scalar arguments and \link[base]{vector} quantiles \eqn{q}.
 This function takes about 1/10 time of function \code{gk::pgh}.
 
-Function \link{qGH} gives the quantile function, only taking scalar arguments and \link[base]{vector} probabilities \eqn{p}.
+Function \link{qGH} returns the quantile function, only taking scalar arguments and \link[base]{vector} probabilities \eqn{p}.
 
 Function \link{rGH} generates random deviates, only taking scalar arguments.
 }
 \description{
 Density, distribution function, quantile function and simulation
-for the Tukey's \eqn{g}-&-\eqn{h} distribution with
+for Tukey \eqn{g}-&-\eqn{h} distribution with
 location parameter \eqn{A},
 scale parameter \eqn{B},
 skewness \eqn{g} and
 elongation \eqn{h}.
-}
-\details{
-Argument \code{A}, \code{B}, \code{g} and \code{h} will be recycled to the maximum length of the four.
-}
-\note{
-Function \code{gk:::z2gh} is only an \emph{approximation} to Tukey's \eqn{g}-&-\eqn{h} transformation.
 }
 \examples{
 (x = c(NA_real_, rGH(n = 5L, g = .3, h = .1)))

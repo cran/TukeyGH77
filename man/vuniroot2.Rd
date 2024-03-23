@@ -17,20 +17,20 @@ vuniroot2(
 
 \item{f}{monotone \link[base]{function} \eqn{f(x)} whose roots are to be solved}
 
-\item{interval}{length two \link[base]{numeric} \link[base]{vector}}
+\item{interval}{\link[base]{length}-2 \link[base]{numeric} \link[base]{vector}}
 
-\item{tol}{\link[base]{double} scalar, desired accuracy (convergence tolerance),}
+\item{tol}{\link[base]{double} scalar, desired accuracy, i.e., convergence tolerance}
 
 \item{maxiter}{\link[base]{integer} scalar, maximum number of iterations}
 }
 \value{
-Function \code{\link[=vuniroot2]{vuniroot2()}} returns a \link[base]{numeric} \link[base]{vector} \eqn{x} as the solution of \eqn{y = f(x)} with given vector \eqn{y}.
+Function \link{vuniroot2} returns a \link[base]{numeric} \link[base]{vector} \eqn{x} as the solution of \eqn{y = f(x)} with given \link[base]{vector} \eqn{y}.
 }
 \description{
 To solve a monotone function \eqn{y = f(x)} for a given \link[base]{vector} of \eqn{y} values.
 }
 \details{
-Function \code{\link[=vuniroot2]{vuniroot2()}}, different from \link[rstpm2]{vuniroot}, does
+Function \link{vuniroot2}, different from \link[rstpm2]{vuniroot}, does
 \itemize{
 \item{accept \code{NA_real_} as element(s) of \eqn{y}}
 \item{handle the case when the analytic root is at \code{lower} and/or \code{upper}}
@@ -42,6 +42,7 @@ when the function value \code{f(lower)} and \code{f(upper)} are not of opposite 
 }
 \examples{
 library(rstpm2)
+stopifnot(packageDate('rstpm2') == as.Date('2023-12-03')) # not base::identical
 lwr = rep(1, times = 9L); upr = rep(3, times = 9L)
 
 # ?rstpm2::vuniroot does not accept NA \eqn{y}

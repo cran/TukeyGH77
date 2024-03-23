@@ -1,6 +1,6 @@
 
 
-# we do not have parameter `...` in function [vuniroot2()], otherwise it will cause warning message 
+# we do not have parameter `...` in function [vuniroot2], otherwise it will cause warning message 
 # `The [dGH]/[pGH] function should raise an error when names are incorrectly named' in `fitdistrplus:::test1fun`.
 
 
@@ -14,15 +14,15 @@
 #' 
 #' @param f monotone \link[base]{function} \eqn{f(x)} whose roots are to be solved
 #' 
-#' @param interval length two \link[base]{numeric} \link[base]{vector}
+#' @param interval \link[base]{length}-2 \link[base]{numeric} \link[base]{vector}
 #' 
-#' @param tol \link[base]{double} scalar, desired accuracy (convergence tolerance), 
+#' @param tol \link[base]{double} scalar, desired accuracy, i.e., convergence tolerance
 
 #' @param maxiter \link[base]{integer} scalar, maximum number of iterations
 #' 
 #' @details
 #' 
-#' Function [vuniroot2()], different from \link[rstpm2]{vuniroot}, does
+#' Function [vuniroot2], different from \link[rstpm2]{vuniroot}, does
 #' \itemize{
 #' \item{accept `NA_real_` as element(s) of \eqn{y}}
 #' \item{handle the case when the analytic root is at `lower` and/or `upper`}
@@ -34,10 +34,11 @@
 #' 
 #' @returns 
 #' 
-#' Function [vuniroot2()] returns a \link[base]{numeric} \link[base]{vector} \eqn{x} as the solution of \eqn{y = f(x)} with given vector \eqn{y}.
+#' Function [vuniroot2] returns a \link[base]{numeric} \link[base]{vector} \eqn{x} as the solution of \eqn{y = f(x)} with given \link[base]{vector} \eqn{y}.
 #' 
 #' @examples 
 #' library(rstpm2)
+#' stopifnot(packageDate('rstpm2') == as.Date('2023-12-03')) # not base::identical
 #' lwr = rep(1, times = 9L); upr = rep(3, times = 9L)
 #' 
 #' # ?rstpm2::vuniroot does not accept NA \eqn{y}
