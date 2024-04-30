@@ -13,7 +13,7 @@ GH2z(q, q0 = (q - A)/B, A = 0, B = 1, ...)
 standardized quantiles \eqn{q_0=(q-A)/B}}
 
 \item{A, B}{(optional) \link[base]{double} \emph{scalars}, location and scale parameters of
-Tukey \eqn{g}-&-\eqn{h} trasformation.  Ignored if \code{q0} is provided.}
+Tukey \eqn{g}-&-\eqn{h} transformation.  Ignored if \code{q0} is provided.}
 
 \item{...}{parameters of internal helper function \link{.GH2z}}
 }

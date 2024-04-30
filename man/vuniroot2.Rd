@@ -43,17 +43,17 @@ when the function value \code{f(lower)} and \code{f(upper)} are not of opposite 
 \examples{
 library(rstpm2)
 stopifnot(packageDate('rstpm2') == as.Date('2023-12-03')) # not base::identical
-lwr = rep(1, times = 9L); upr = rep(3, times = 9L)
 
 # ?rstpm2::vuniroot does not accept NA \eqn{y}
-tryCatch(vuniroot(function(x) x^2 - c(NA, 1:8), lower = lwr, upper = upr), error = identity)
+tryCatch(vuniroot(function(x) x^2 - c(NA, 2:9), lower = 1, upper = 3), error = identity)
 
 # ?rstpm2::vuniroot not good when the analytic root is at `lower` or `upper`
 f <- function(x) x^2 - 1:9
-tryCatch(vuniroot(f, lower = lwr, upper = upr, extendInt = 'no'), warning = identity)
-tryCatch(vuniroot(f, lower = lwr, upper = upr, extendInt = 'yes'), warning = identity)
-tryCatch(vuniroot(f, lower = lwr, upper = upr, extendInt = 'downX'), error = identity)
-tryCatch(vuniroot(f, lower = lwr, upper = upr, extendInt = 'upX'), warning = identity)
+vuniroot(f, lower = .99, upper = 3.001) # good
+tryCatch(vuniroot(f, lower = 1, upper = 3, extendInt = 'no'), warning = identity)
+tryCatch(vuniroot(f, lower = 1, upper = 3, extendInt = 'yes'), warning = identity)
+tryCatch(vuniroot(f, lower = 1, upper = 3, extendInt = 'downX'), error = identity)
+tryCatch(vuniroot(f, lower = 1, upper = 3, extendInt = 'upX'), warning = identity)
 
 vuniroot2(c(NA, 1:9), f = function(x) x^2, interval = c(1, 3)) # all good
 

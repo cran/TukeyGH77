@@ -11,7 +11,7 @@
 #' standardized quantiles \eqn{q_0=(q-A)/B}
 #' 
 #' @param A,B (optional) \link[base]{double} *scalars*, location and scale parameters of 
-#' Tukey \eqn{g}-&-\eqn{h} trasformation.  Ignored if `q0` is provided.
+#' Tukey \eqn{g}-&-\eqn{h} transformation.  Ignored if `q0` is provided.
 #' 
 #' @param ... parameters of internal helper function [.GH2z]
 #' 

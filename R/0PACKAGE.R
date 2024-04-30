@@ -24,8 +24,5 @@
 #' John Wiley & Sons, Ltd, New York. 
 #' \doi{10.1002/9781118150702.ch11}
 #'
-#' @author Tingting Zhan
-#'
-#' @keywords internal
 '_PACKAGE'
 
