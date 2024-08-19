@@ -1,6 +1,4 @@
 
-# Edit tzh/vuniroot2.R !!!!
-
 # we do not have parameter `...` in function [vuniroot2], otherwise it will cause warning message 
 # `The [dGH]/[pGH] function should raise an error when names are incorrectly named' in `fitdistrplus:::test1fun`.
 
@@ -39,7 +37,6 @@
 #' 
 #' @examples 
 #' library(rstpm2)
-#' stopifnot(packageDate('rstpm2') == as.Date('2023-12-03')) # not base::identical
 #' 
 #' # ?rstpm2::vuniroot does not accept NA \eqn{y}
 #' tryCatch(vuniroot(function(x) x^2 - c(NA, 2:9), lower = 1, upper = 3), error = identity)

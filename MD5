@@ -1,4 +1,4 @@
-04a901337dd580c1e4e84f6ab2606971 *DESCRIPTION
+f9459260e193ba1beee0a13458711847 *DESCRIPTION
 fcbd1051bbc94a2511b20ac1b6b8fbf1 *NAMESPACE
 2caafb2dda94eb9d60efdee1a66023d0 *NEWS.md
 d4930f7d8564893efe1150672d7abdad *R/0PACKAGE.R
@@ -6,13 +6,13 @@ d4930f7d8564893efe1150672d7abdad *R/0PACKAGE.R
 a0b708345eb667d27f9943db524c34ae *R/TukeyGH.R
 acaa3291aad7b4a4f702a7edd8ab4aa6 *R/helper.R
 708561d51fedd99ccdf42eb96c11e85f *R/letterValue.R
-440c5bca7a3174e79c29f7a3caad20a7 *R/vuniroot2.R
+8c0e221b4437433191917cdfc7513f34 *R/vuniroot2.R
 5afe744680108810b65f90dcbe7e46a9 *R/z2GH.R
-f61db891eb928123aba4412ca322f508 *build/partial.rdb
+aa5e5a2cbfaea3d9b6cdbe378ac48cee *build/partial.rdb
 8f0c822df7377ba2bdd7af7df47e63fb *man/GH2z.Rd
 6d9f1b7e409a853f914ce4e8bd3974e8 *man/TukeyGH.Rd
 cb5ba3e64cee445ca76cd8a95dc5cf0a *man/TukeyGH77-package.Rd
 70396d6d62a4118943f1ba82f9767018 *man/TukeyGH_helper.Rd
 605bbd93760a415c8599d6df5cd614ee *man/letterValue.Rd
-f7f3b34d7a264c2069e1dd82e5ba5d09 *man/vuniroot2.Rd
+dc18c99ae8e679002646d5f96b5fae7d *man/vuniroot2.Rd
 42d3ec789c1c77c9b40adf6f60346211 *man/z2GH.Rd

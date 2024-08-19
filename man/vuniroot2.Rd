@@ -42,7 +42,6 @@ when the function value \code{f(lower)} and \code{f(upper)} are not of opposite 
 }
 \examples{
 library(rstpm2)
-stopifnot(packageDate('rstpm2') == as.Date('2023-12-03')) # not base::identical
 
 # ?rstpm2::vuniroot does not accept NA \eqn{y}
 tryCatch(vuniroot(function(x) x^2 - c(NA, 2:9), lower = 1, upper = 3), error = identity)
