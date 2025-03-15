@@ -11,16 +11,17 @@
 #' parameters of Tukey \eqn{g}-&-\eqn{h} distribution
 #' 
 #' @details
-#' Function [z2GH] transforms standard normal quantiles to Tukey \eqn{g}-&-\eqn{h} quantiles.
+#' Function [z2GH()] transforms standard normal quantiles to Tukey \eqn{g}-&-\eqn{h} quantiles.
 #' 
 #' @returns
-#' Function [z2GH] returns a \link[base]{double} scalar or \link[base]{vector}.
+#' Function [z2GH()] returns a \link[base]{double} scalar or \link[base]{vector}.
 #' 
 #' @note
 #' Function `gk:::z2gh` is not fully vectorized, 
 #' i.e., cannot take \link[base]{vector} `z` *and* \link[base]{vector} `A/B/g/h`,
 #' as of 2023-07-20 (package `gk` version 0.6.0)
 #' 
+#' @keywords internal
 #' @export
 z2GH <- function(z, A = 0, B = 1, g = 0, h = 0) {
   # not compute intensive

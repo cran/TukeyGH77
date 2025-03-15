@@ -15,19 +15,19 @@ standardized quantiles \eqn{q_0=(q-A)/B}}
 \item{A, B}{(optional) \link[base]{double} \emph{scalars}, location and scale parameters of
 Tukey \eqn{g}-&-\eqn{h} transformation.  Ignored if \code{q0} is provided.}
 
-\item{...}{parameters of internal helper function \link{.GH2z}}
+\item{...}{parameters of internal helper function \code{\link[=.GH2z]{.GH2z()}}}
 }
 \value{
-Function \link{GH2z} returns a \link[base]{double} \link[base]{vector} of the same length as input \code{q}.
+Function \code{\link[=GH2z]{GH2z()}} returns a \link[base]{double} \link[base]{vector} of the same length as input \code{q}.
 }
 \description{
 To transform Tukey \eqn{g}-&-\eqn{h} quantiles to standard normal quantiles.
 }
 \details{
-Unfortunately, function \link{GH2z}, the inverse of Tukey \eqn{g}-&-\eqn{h} transformation,
+Unfortunately, function \code{\link[=GH2z]{GH2z()}}, the inverse of Tukey \eqn{g}-&-\eqn{h} transformation,
 does not have a closed form and needs to be solved numerically.
 
-For compute intensive jobs, use internal helper function \link{.GH2z}.
+For compute intensive jobs, use internal helper function \code{\link[=.GH2z]{.GH2z()}}.
 }
 \examples{
 z = rnorm(1e3L)
@@ -36,3 +36,4 @@ all.equal.numeric(.GH2z(z2GH(z, g = 0, h = .1), g = 0, h = .1), z)
 all.equal.numeric(.GH2z(z2GH(z, g = .2, h = 0), g = .2, h = 0), z)
 
 }
+\keyword{internal}

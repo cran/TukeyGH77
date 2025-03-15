@@ -24,13 +24,13 @@ vuniroot2(
 \item{maxiter}{\link[base]{integer} scalar, maximum number of iterations}
 }
 \value{
-Function \link{vuniroot2} returns a \link[base]{numeric} \link[base]{vector} \eqn{x} as the solution of \eqn{y = f(x)} with given \link[base]{vector} \eqn{y}.
+Function \code{\link[=vuniroot2]{vuniroot2()}} returns a \link[base]{numeric} \link[base]{vector} \eqn{x} as the solution of \eqn{y = f(x)} with given \link[base]{vector} \eqn{y}.
 }
 \description{
 To solve a monotone function \eqn{y = f(x)} for a given \link[base]{vector} of \eqn{y} values.
 }
 \details{
-Function \link{vuniroot2}, different from \link[rstpm2]{vuniroot}, does
+Function \code{\link[=vuniroot2]{vuniroot2()}}, different from \link[rstpm2]{vuniroot}, does
 \itemize{
 \item{accept \code{NA_real_} as element(s) of \eqn{y}}
 \item{handle the case when the analytic root is at \code{lower} and/or \code{upper}}
@@ -57,3 +57,4 @@ tryCatch(vuniroot(f, lower = 1, upper = 3, extendInt = 'upX'), warning = identit
 vuniroot2(c(NA, 1:9), f = function(x) x^2, interval = c(1, 3)) # all good
 
 }
+\keyword{internal}

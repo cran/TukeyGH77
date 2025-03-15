@@ -30,7 +30,7 @@ either to use \code{'both'} for half-spreads (default),
 \item{...}{additional parameters, currently not in use}
 }
 \value{
-Function \link{letterValue} returns a \code{'letterValue'} object,
+Function \code{\link[=letterValue]{letterValue()}} returns a \code{'letterValue'} object,
 which is \link[base]{double} \link[base]{vector} of estimates \eqn{(\hat{A}, \hat{B}, \hat{g}, \hat{h})}
 for a Tukey \eqn{g}-&-\eqn{h} distribution.
 }
@@ -51,7 +51,7 @@ Unexported function \code{letterV_Bh_g()} estimates parameters \eqn{B} and \eqn{
 Unexported function \code{letterV_Bh()} estimates parameters \eqn{B} and \eqn{h} for Tukey \eqn{h}-distribution,
 i.e., when \eqn{g=0} and \eqn{h\neq 0}, using equation (26a), (26b) and (27).
 
-Function \link{letterValue} plays a similar role as \code{fitdistrplus:::start.arg.default},
+Function \code{\link[=letterValue]{letterValue()}} plays a similar role as \code{fitdistrplus:::start.arg.default},
 thus extends \code{fitdistrplus::fitdist} for estimating Tukey \eqn{g}-&-\eqn{h} distributions.
 }
 \note{

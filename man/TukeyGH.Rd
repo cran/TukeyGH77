@@ -29,7 +29,7 @@ pGH(q, A = 0, B = 1, g = 0, h = 0, lower.tail = TRUE, log.p = FALSE, ...)
 
 \item{log, log.p}{\link[base]{logical} scalar, if \code{TRUE}, probabilities \eqn{p} are given as \eqn{\log(p)}.}
 
-\item{...}{other parameters of function \link{vuniroot2}}
+\item{...}{other parameters of function \code{\link[=vuniroot2]{vuniroot2()}}}
 
 \item{n}{\link[base]{integer} scalar, number of observations}
 
@@ -38,16 +38,16 @@ pGH(q, A = 0, B = 1, g = 0, h = 0, lower.tail = TRUE, log.p = FALSE, ...)
 \item{lower.tail}{\link[base]{logical} scalar, if \code{TRUE} (default), probabilities are \eqn{Pr(X\le x)} otherwise, \eqn{Pr(X>x)}.}
 }
 \value{
-Function \link{dGH} returns the density and accommodates \link[base]{vector} arguments \code{A}, \code{B}, \code{g} and \code{h}.
+Function \code{\link[=dGH]{dGH()}} returns the density and accommodates \link[base]{vector} arguments \code{A}, \code{B}, \code{g} and \code{h}.
 The quantiles \code{x} can be either \link[base]{vector} or \link[base]{matrix}.
 This function takes about 1/5 time of \code{gk::dgh}.
 
-Function \link{pGH} returns the distribution function, only taking scalar arguments and \link[base]{vector} quantiles \eqn{q}.
+Function \code{\link[=pGH]{pGH()}} returns the distribution function, only taking scalar arguments and \link[base]{vector} quantiles \eqn{q}.
 This function takes about 1/10 time of function \code{gk::pgh}.
 
-Function \link{qGH} returns the quantile function, only taking scalar arguments and \link[base]{vector} probabilities \eqn{p}.
+Function \code{\link[=qGH]{qGH()}} returns the quantile function, only taking scalar arguments and \link[base]{vector} probabilities \eqn{p}.
 
-Function \link{rGH} generates random deviates, only taking scalar arguments.
+Function \code{\link[=rGH]{rGH()}} generates random deviates, only taking scalar arguments.
 }
 \description{
 Density, distribution function, quantile function and simulation

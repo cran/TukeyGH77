@@ -13,16 +13,17 @@ z2GH(z, A = 0, B = 1, g = 0, h = 0)
 parameters of Tukey \eqn{g}-&-\eqn{h} distribution}
 }
 \value{
-Function \link{z2GH} returns a \link[base]{double} scalar or \link[base]{vector}.
+Function \code{\link[=z2GH]{z2GH()}} returns a \link[base]{double} scalar or \link[base]{vector}.
 }
 \description{
 To transform standard normal quantiles to Tukey \eqn{g}-&-\eqn{h} quantiles.
 }
 \details{
-Function \link{z2GH} transforms standard normal quantiles to Tukey \eqn{g}-&-\eqn{h} quantiles.
+Function \code{\link[=z2GH]{z2GH()}} transforms standard normal quantiles to Tukey \eqn{g}-&-\eqn{h} quantiles.
 }
 \note{
 Function \code{gk:::z2gh} is not fully vectorized,
 i.e., cannot take \link[base]{vector} \code{z} \emph{and} \link[base]{vector} \code{A/B/g/h},
 as of 2023-07-20 (package \code{gk} version 0.6.0)
 }
+\keyword{internal}

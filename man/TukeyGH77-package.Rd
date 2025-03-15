@@ -27,11 +27,11 @@ John Wiley & Sons, Ltd, New York.
 \doi{10.1002/9781118150702.ch11}
 }
 \author{
-\strong{Maintainer}: Tingting Zhan \email{tingtingzhan@gmail.com} [copyright holder]
+\strong{Maintainer}: Tingting Zhan \email{tingtingzhan@gmail.com}
 
 Other contributors:
 \itemize{
-  \item Inna Chervoneva \email{Inna.Chervoneva@jefferson.edu} [contributor, copyright holder]
+  \item Inna Chervoneva \email{Inna.Chervoneva@jefferson.edu} [contributor]
 }
 
 }

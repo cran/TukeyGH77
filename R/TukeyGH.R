@@ -35,23 +35,23 @@
 #' 
 # @param interval interval of standard normal quantiles, when solving from Tukey \eqn{g}-&-\eqn{h} quantiles using the vuniroot algorithm 
 #' 
-#' @param ... other parameters of function [vuniroot2]
+#' @param ... other parameters of function [vuniroot2()]
 #' 
 # @details
 # Argument `A`, `B`, `g` and `h` will be recycled to the maximum length of the four.
 #' 
 #' @returns 
 #' 
-#' Function [dGH] returns the density and accommodates \link[base]{vector} arguments `A`, `B`, `g` and `h`.
+#' Function [dGH()] returns the density and accommodates \link[base]{vector} arguments `A`, `B`, `g` and `h`.
 #' The quantiles `x` can be either \link[base]{vector} or \link[base]{matrix}.
 #' This function takes about 1/5 time of `gk::dgh`.
 #' 
-#' Function [pGH] returns the distribution function, only taking scalar arguments and \link[base]{vector} quantiles \eqn{q}.
+#' Function [pGH()] returns the distribution function, only taking scalar arguments and \link[base]{vector} quantiles \eqn{q}.
 #' This function takes about 1/10 time of function `gk::pgh`.
 #' 
-#' Function [qGH] returns the quantile function, only taking scalar arguments and \link[base]{vector} probabilities \eqn{p}.
+#' Function [qGH()] returns the quantile function, only taking scalar arguments and \link[base]{vector} probabilities \eqn{p}.
 #' 
-#' Function [rGH] generates random deviates, only taking scalar arguments.
+#' Function [rGH()] generates random deviates, only taking scalar arguments.
 #' 
 #' @examples
 #' (x = c(NA_real_, rGH(n = 5L, g = .3, h = .1)))

@@ -13,17 +13,17 @@
 #' @param A,B (optional) \link[base]{double} *scalars*, location and scale parameters of 
 #' Tukey \eqn{g}-&-\eqn{h} transformation.  Ignored if `q0` is provided.
 #' 
-#' @param ... parameters of internal helper function [.GH2z]
+#' @param ... parameters of internal helper function [.GH2z()]
 #' 
 #' @details
-#' Unfortunately, function [GH2z], the inverse of Tukey \eqn{g}-&-\eqn{h} transformation, 
+#' Unfortunately, function [GH2z()], the inverse of Tukey \eqn{g}-&-\eqn{h} transformation, 
 #' does not have a closed form and needs to be solved numerically.
 #' 
-#' For compute intensive jobs, use internal helper function [.GH2z].
+#' For compute intensive jobs, use internal helper function [.GH2z()].
 #' 
 #' 
 #' @returns 
-#' Function [GH2z] returns a \link[base]{double} \link[base]{vector} of the same length as input `q`.
+#' Function [GH2z()] returns a \link[base]{double} \link[base]{vector} of the same length as input `q`.
 #' 
 #' @examples
 #' z = rnorm(1e3L)
@@ -31,6 +31,7 @@
 #' all.equal.numeric(.GH2z(z2GH(z, g = 0, h = .1), g = 0, h = .1), z)
 #' all.equal.numeric(.GH2z(z2GH(z, g = .2, h = 0), g = .2, h = 0), z)
 #' 
+#' @keywords internal
 #' @export
 GH2z <- function(q, q0 = (q - A)/B, A = 0, B = 1, ...) {
   # ?base::is.finite finds finite AND non-missing; as fast as `rep(TRUE, times = nq)` (where nq = length(q))

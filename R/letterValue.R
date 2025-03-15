@@ -37,7 +37,7 @@
 #' Unexported function `letterV_Bh()` estimates parameters \eqn{B} and \eqn{h} for Tukey \eqn{h}-distribution,
 #' i.e., when \eqn{g=0} and \eqn{h\neq 0}, using equation (26a), (26b) and (27).
 #' 
-#' Function [letterValue] plays a similar role as `fitdistrplus:::start.arg.default`,
+#' Function [letterValue()] plays a similar role as `fitdistrplus:::start.arg.default`,
 #' thus extends `fitdistrplus::fitdist` for estimating Tukey \eqn{g}-&-\eqn{h} distributions.
 #' 
 #' @note
@@ -45,7 +45,7 @@
 #' 
 #' @returns 
 #' 
-#' Function [letterValue] returns a `'letterValue'` object, 
+#' Function [letterValue()] returns a `'letterValue'` object, 
 #' which is \link[base]{double} \link[base]{vector} of estimates \eqn{(\hat{A}, \hat{B}, \hat{g}, \hat{h})}
 #' for a Tukey \eqn{g}-&-\eqn{h} distribution.
 #' 
